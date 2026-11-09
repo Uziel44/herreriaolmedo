@@ -1,0 +1,1336 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Herrería Olmedo | Portones, rejas, escaleras y muebles de hierro a medida</title>
+<meta name="description" content="Herrería a medida: portones, rejas, escaleras, barandas y muebles de hierro y madera. Medimos en tu domicilio y te pasamos el presupuesto sin cargo.">
+<meta name="theme-color" content="#000000">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:title" content="Herrería Olmedo | Herrería a medida">
+<meta property="og:description" content="Portones, rejas, escaleras, barandas y muebles de hierro y madera. Presupuesto sin cargo.">
+<!-- EDITAR al publicar: og:image necesita URL absoluta (https://tudominio.com/img/comedero-elevado.jpg) -->
+<meta property="og:image" content="img/comedero-elevado.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%23000'/%3E%3Cpath d='M2 13L12 10H36V16H26V21L30 26V32H10V26L14 21V16H12Z' fill='%236F93FF'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<!--
+  EDITAR: datos de ejemplo que hay que reemplazar (buscar y reemplazar en todo el archivo)
+  - 5490000000000                      número de WhatsApp (código de país + área + número, sin signos)
+  - +54 9 00 0000-0000                 teléfono visible
+  - contacto@herreriaolmedo.com.ar     email
+  - instagram.com/herreriaolmedo       Instagram
+  - facebook.com/herreriaolmedo        Facebook
+  - Dirección del taller, Ciudad       dirección
+  - Herrería Olmedo / Olmedo           nombre del negocio
+
+  FOTOS (carpeta img/)
+  - comedero-elevado.jpg: foto propia aportada por el cliente.
+  - Las demás son fotos de stock de Unsplash (licencia Unsplash: uso libre, sin atribución obligatoria).
+    Reemplazarlas por fotos de trabajos reales antes de publicar, para no mostrar trabajos ajenos como propios:
+      trabajo-escalera.jpg (Mitchell Luo), trabajo-estructura.jpg (Margo Evardson), taller-soldadura.jpg (Rob Lambert),
+      trabajo-porton.jpg y trabajo-reja.jpg (Unsplash).
+-->
+<style>
+/* ===== base.css ===== */
+:root{
+  --negro:#000;
+  --blanco:#fff;
+  --cobalto:#0B35D6;      /* azul de fondo: texto blanco encima (8:1) */
+  --chispa:#6F93FF;       /* azul claro para lineas y acentos sobre negro */
+  --acero:#565E6E;        /* gris de texto secundario sobre blanco */
+  --acero-claro:#A3AAB8;  /* gris de texto secundario sobre negro */
+  --papel:#F0F2F6;        /* gris plano, fondo alternativo claro */
+
+  --f-display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --f-text:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+
+  --header-h:4.25rem;
+  --gutter:clamp(1rem,4.5vw,3rem);
+  --max:80rem;
+  --section-pad:clamp(4.5rem,10vw,8.5rem);
+  --cut:clamp(1.5rem,3vw,2.75rem);   /* esquina cortada de las chapas */
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--header-h);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--negro);color:var(--blanco);font:400 1rem/1.6 var(--f-text);-webkit-font-smoothing:antialiased;overflow-x:clip}
+h1,h2,h3,h4,p,ul,ol,dl,dd,figure,blockquote{margin:0}
+ul,ol{padding:0;list-style:none}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--accent,var(--chispa));outline-offset:3px}
+::selection{background:var(--cobalto);color:var(--blanco)}
+
+.visually-hidden{position:absolute!important;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip{position:absolute;left:1rem;top:-5rem;z-index:100;padding:.75rem 1rem;background:var(--blanco);color:var(--negro);font-weight:700;text-decoration:none}
+.skip:focus{top:1rem}
+
+/* ---- temas por seccion: cada seccion lleva uno ---- */
+.theme-dark{--bg:var(--negro);--fg:var(--blanco);--muted:var(--acero-claro);--line:rgba(255,255,255,.2);--accent:var(--chispa);--on-accent:var(--negro);--accent-hover:var(--blanco);--on-accent-hover:var(--negro)}
+.theme-light{--bg:var(--blanco);--fg:var(--negro);--muted:var(--acero);--line:rgba(0,0,0,.18);--accent:var(--cobalto);--on-accent:var(--blanco);--accent-hover:var(--negro);--on-accent-hover:var(--blanco)}
+.theme-paper{--bg:var(--papel);--fg:var(--negro);--muted:var(--acero);--line:rgba(0,0,0,.18);--accent:var(--cobalto);--on-accent:var(--blanco);--accent-hover:var(--negro);--on-accent-hover:var(--blanco)}
+.theme-cobalt{--bg:var(--cobalto);--fg:var(--blanco);--muted:rgba(255,255,255,.82);--line:rgba(255,255,255,.35);--accent:var(--blanco);--on-accent:var(--cobalto);--accent-hover:var(--negro);--on-accent-hover:var(--blanco)}
+.theme-dark,.theme-light,.theme-paper,.theme-cobalt{background:var(--bg);color:var(--fg)}
+
+/* ---- layout ---- */
+.wrap{width:min(100% - 2*var(--gutter),var(--max));margin-inline:auto}
+.section{position:relative;padding-block:var(--section-pad)}
+
+/* ---- tipografia ---- */
+.h-display{font:900 clamp(4.5rem,17vw,13.5rem)/.8 var(--f-display);text-transform:uppercase;letter-spacing:.005em}
+.h-section{font:800 clamp(2.75rem,8vw,6.5rem)/.93 var(--f-display);text-transform:uppercase;letter-spacing:.005em;text-wrap:balance}
+.h-item{font:800 clamp(1.75rem,4vw,3.25rem)/.92 var(--f-display);text-transform:uppercase;letter-spacing:.005em}
+.lede{max-width:42rem;font-size:clamp(1.125rem,1.6vw,1.375rem);line-height:1.5;color:var(--muted)}
+.muted{color:var(--muted)}
+
+/* ---- botones ---- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.65rem;min-height:3.25rem;padding:.85rem 1.6rem;border:2px solid transparent;background:transparent;color:inherit;font:700 1rem/1.1 var(--f-text);text-align:center;text-decoration:none;transition:background-color .2s var(--ease),color .2s var(--ease),border-color .2s var(--ease)}
+.btn--primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.btn--primary:hover{background:var(--accent-hover);border-color:var(--accent-hover);color:var(--on-accent-hover)}
+.btn--ghost{border-color:currentColor;color:var(--fg)}
+.btn--ghost:hover{background:var(--fg);border-color:var(--fg);color:var(--bg)}
+
+/* ---- iconos (sprite) ---- */
+.icon{width:1.25em;height:1.25em;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.icon--fill{fill:currentColor;stroke:none}
+
+/* ---- chapa con esquina cortada ---- */
+.plate{clip-path:polygon(0 0,calc(100% - var(--cut)) 0,100% var(--cut),100% 100%,0 100%)}
+
+/* ---- textura de chapa mate (solo secciones oscuras) ---- */
+.grain{position:relative;isolation:isolate}
+.grain::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.1;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* ---- movimiento reducido ---- */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-delay:0s!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+}
+/* ===== hero.css ===== */
+/* =====================================================================
+   HEADER (hdr-) + CINTA METRICA (tape-) + HERO (hero-)
+   ===================================================================== */
+
+/* ---------- header ---------- */
+.hdr{position:sticky;top:0;z-index:50;height:var(--header-h);border-bottom:1px solid var(--line)}
+.hdr-bar{display:flex;align-items:center;gap:1rem;height:100%;padding-bottom:.375rem}
+
+/* marca */
+.hdr-brand{display:flex;align-items:center;gap:.65rem;min-height:2.75rem;color:var(--fg);text-decoration:none}
+.hdr-mark{font-size:1.4rem;color:var(--accent)} /* .icon mide 1.25em: 1.4rem x 1.25 = 1.75rem */
+.hdr-brand-text{display:flex;flex-direction:column;gap:.2rem}
+.hdr-name{font:900 1.75rem/.8 var(--f-display);text-transform:uppercase;letter-spacing:.01em}
+.hdr-sub{font:600 .8rem/1 var(--f-text);color:var(--muted)}
+
+/* navegacion y acciones: solo desde 60rem */
+.hdr-nav{display:none}
+.hdr-list{display:flex;gap:clamp(.75rem,1.6vw,2rem)}
+.hdr-link{display:flex;align-items:center;min-height:2.75rem;padding-inline:.25rem;font:600 .95rem/1 var(--f-text);color:var(--fg);text-decoration:none}
+.hdr-link:hover,.hdr-link:focus-visible{text-decoration:underline;text-decoration-thickness:2px;text-decoration-color:var(--accent);text-underline-offset:.5rem;text-decoration-skip-ink:none}
+
+.hdr-actions{display:none}
+.hdr-tel{display:flex;align-items:center;justify-content:center;gap:.55rem;min-width:2.75rem;min-height:2.75rem;font:600 .95rem/1 var(--f-text);color:var(--fg);text-decoration:none}
+.hdr-tel:hover{color:var(--accent)}
+.hdr-tel-ico{color:var(--accent)}
+.hdr-tel-text{display:none}
+.hdr-cta{min-height:2.75rem;padding:.55rem 1.15rem;font-size:.95rem;white-space:nowrap}
+
+/* boton de menu: solo en mobile */
+.hdr-toggle{display:inline-grid;place-items:center;flex:none;width:2.75rem;height:2.75rem;margin-left:auto;padding:0;border:1px solid var(--line);background:transparent;color:var(--fg);font-size:1.2rem;transition:border-color .2s var(--ease),color .2s var(--ease)}
+.hdr-toggle:hover{border-color:var(--fg)}
+.hdr-toggle[aria-expanded="true"]{border-color:var(--accent);color:var(--accent)}
+.hdr-ico-close{display:none}
+.hdr-toggle[aria-expanded="true"] .hdr-ico-open{display:none}
+.hdr-toggle[aria-expanded="true"] .hdr-ico-close{display:block}
+
+/* panel mobile a pantalla completa, debajo del header (atributo hidden por defecto) */
+.hdr-menu{position:fixed;top:var(--header-h);right:0;bottom:0;left:0;overflow-y:auto;overscroll-behavior:contain;background:var(--bg)}
+.hdr-menu-inner{display:flex;flex-direction:column;gap:2rem;min-height:100%;padding-block:1.5rem 2rem}
+.hdr-menu-list{border-top:1px solid var(--line)}
+.hdr-menu-link{display:block;padding:.6rem 0;border-bottom:1px solid var(--line);font:800 clamp(2.5rem,9vw,3.5rem)/1 var(--f-display);text-transform:uppercase;letter-spacing:.005em;color:var(--fg);text-decoration:none}
+.hdr-menu-link:hover,.hdr-menu-link:focus-visible{color:var(--accent)}
+.hdr-menu-foot{display:grid;gap:.75rem;margin-top:auto}
+
+/* bloqueo de scroll con el menu abierto (la clase la pone hero.js en <html>) */
+.menu-open{overflow:hidden;scrollbar-gutter:stable}
+
+@media (min-width:60rem){
+  .hdr-bar{gap:1.5rem}
+  .hdr-nav{display:block;margin-inline:auto}
+  .hdr-actions{display:flex;align-items:center;gap:1rem}
+  .hdr-toggle,.hdr-menu{display:none}
+}
+@media (min-width:80rem){
+  .hdr-tel-text{display:inline}
+}
+
+/* ---------- cinta metrica de scroll ---------- */
+/* hero.js escribe --p (0 a 1) en <html>. Sin transiciones: la hoja sigue al scroll. */
+.tape-rail{position:absolute;right:0;bottom:0;left:0;height:10px;pointer-events:none;contain:layout paint}
+.tape-blade{position:absolute;top:0;bottom:0;left:0;width:calc(var(--p,0) * 100%);background-color:var(--fg);background-image:repeating-linear-gradient(90deg,var(--bg) 0 1px,transparent 1px 100px),repeating-linear-gradient(90deg,var(--bg) 0 1px,transparent 1px 50px),repeating-linear-gradient(90deg,var(--bg) 0 1px,transparent 1px 10px);background-size:100% 10px,100% 7px,100% 4px;background-position:0 100%;background-repeat:no-repeat}
+/* gancho del extremo */
+.tape-blade::after{content:"";position:absolute;top:0;right:0;bottom:0;width:4px;background:var(--accent)}
+
+/* =====================================================================
+   HERO
+   ===================================================================== */
+.hero{padding-top:clamp(2.5rem,6vw,5rem);padding-bottom:clamp(3rem,7vw,6rem)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(2rem,5vw,5rem)}
+
+/* titulo: "Herrería" entra en UNA línea a cualquier ancho (ver notas de medida abajo) */
+.hero-title{margin-bottom:clamp(1.25rem,2.5vw,2rem);font-size:clamp(4.5rem,22vw,9.5rem);line-height:.9}
+.hero-line{display:block;white-space:nowrap;animation:hero-rise .7s var(--ease) backwards}
+.hero-line:nth-child(2){animation-delay:.12s}
+
+.hero-lede{margin-top:clamp(1.25rem,3vw,2rem);color:var(--fg);color:color-mix(in srgb,var(--fg) 85%,transparent)}
+
+.hero-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:clamp(1.5rem,3vw,2.25rem)}
+.hero-btn{flex:1 1 auto}
+
+.hero-checks{display:grid;gap:.5rem;margin-top:clamp(1.75rem,3.5vw,2.5rem);padding-top:1.25rem;border-top:1px solid var(--line);font-size:.95rem}
+.hero-check{display:flex;align-items:center;gap:.5rem}
+.hero-check-ico{color:var(--accent)}
+
+/* ---------- cotas (linea de 1px + marcas de 14px + leyenda que "corta" la linea) ---------- */
+.hero-cota{--cota-d:.3s;position:relative;display:flex;align-items:center;justify-content:center;height:14px}
+.hero-cota::before{content:"";position:absolute;top:50%;right:0;left:0;height:1px;background:var(--accent);transform-origin:0 50%;animation:hero-draw-x .45s var(--ease) calc(var(--cota-d) + .1s) backwards}
+.hero-cota::after{content:"";position:absolute;inset:0;border-inline:1px solid var(--accent);animation:hero-tick-y .25s var(--ease) var(--cota-d) backwards}
+.hero-cota-label{position:relative;padding-inline:.75rem;background:var(--bg);color:var(--accent);font:600 .875rem/1 var(--f-text);white-space:nowrap;animation:hero-fade .2s linear calc(var(--cota-d) + .5s) backwards}
+
+/* cota vertical (derecha de la foto): leyenda girada, se lee de abajo hacia arriba */
+.hero-cota--v{--cota-d:.55s;flex-direction:column;width:14px;height:auto}
+.hero-cota--v::before{top:0;right:auto;bottom:0;left:50%;width:1px;height:auto;transform-origin:50% 0;animation-name:hero-draw-y}
+.hero-cota--v::after{border-inline:0;border-block:1px solid var(--accent);animation-name:hero-tick-x}
+.hero-cota-label--v{padding:.75rem 0;writing-mode:vertical-rl;transform:rotate(180deg)}
+
+/* cota horizontal (debajo de la foto) */
+.hero-cota--h{--cota-d:.5s}
+
+/* ---------- foto ---------- */
+.hero-figure{display:grid;grid-template-columns:minmax(0,1fr) 14px;gap:.75rem;max-width:32rem}
+.hero-plate{grid-column:1;grid-row:1}
+.hero-img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 60%;animation:hero-wipe .75s var(--ease) .15s backwards}
+.hero-cota--v{grid-column:2;grid-row:1}
+.hero-cota--h{grid-column:1;grid-row:2}
+.hero-caption{grid-column:1 / -1;grid-row:3;font-size:.9rem;line-height:1.5;color:var(--muted)}
+
+/* ---------- secuencia de carga (~1.2 s). El estado final es el CSS por defecto. ---------- */
+/* Las lineas del titulo suben desde el "piso" de su caja: la recorte (clip) acompana al translate. */
+@keyframes hero-rise{
+  from{transform:translateY(100%);clip-path:inset(0 -.1em 100% -.1em)}
+  to{transform:translateY(0);clip-path:inset(-.25em -.1em -.1em -.1em)}
+}
+@keyframes hero-wipe{
+  from{clip-path:inset(100% 0 0 0)}
+  to{clip-path:inset(0 0 0 0)}
+}
+@keyframes hero-draw-x{from{transform:scaleX(0)}}
+@keyframes hero-draw-y{from{transform:scaleY(0)}}
+@keyframes hero-tick-y{from{transform:scaleY(0)}}
+@keyframes hero-tick-x{from{transform:scaleX(0)}}
+@keyframes hero-fade{from{opacity:0}}
+
+/* ---------- breakpoints ---------- */
+@media (min-width:40rem){
+  .hero-btn{flex:0 0 auto}
+  .hero-checks{display:flex;flex-wrap:wrap;gap:.5rem 1.75rem}
+}
+
+@media (min-width:60rem){
+  .hero{display:flex;align-items:center;min-height:calc(100vh - var(--header-h));min-height:calc(100svh - var(--header-h));padding-top:clamp(1.5rem,4vh,4rem);padding-bottom:clamp(2rem,6vh,5rem)}
+  .hero-grid{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);align-items:center}
+  /* el tope por altura (21vh) evita que los botones queden bajo el pliegue en notebooks bajas */
+  .hero-title{font-size:clamp(5.5rem,min(12.4vw,21vh),11rem)}
+  .hero-figure{max-width:none}
+}
+/* ===== servicios.css ===== */
+/* ================= SERVICIOS (svc-) ================= */
+
+/* Cuanto sobresale la fila invertida de la columna. Nunca pasa del margen de pagina
+   menos el anillo de foco (3px + 3px de offset), asi no se corta en el borde del viewport. */
+.svc{--svc-bleed:clamp(.5rem,calc(var(--gutter) - 6px),1.5rem)}
+
+/* ---- cabecera: apilada en mobile, en una fila desde 60rem ---- */
+.svc-head{display:grid;gap:1.25rem;margin-bottom:clamp(2.5rem,6vw,5rem)}
+.svc-lede{text-wrap:balance}
+
+/* ---- lista: sin numeros, filas separadas por lineas de 1px ---- */
+.svc-item{border-top:1px solid var(--line)}
+.svc-item:last-child{border-bottom:1px solid var(--line)}
+
+/* La fila es el link completo. Las variables --svc-* las lee cada hijo, asi el estado
+   invertido se resuelve en un solo selector y la transicion corre en cada elemento. */
+.svc-row{
+  --svc-tags-color:var(--muted);
+  --svc-cta-color:var(--accent);
+  display:grid;grid-template-columns:minmax(0,1fr);gap:1rem;
+  padding:clamp(1.5rem,3vw,2.5rem) var(--svc-bleed);
+  margin-inline:calc(var(--svc-bleed) * -1);
+  background-color:var(--bg);color:var(--fg);text-decoration:none;
+  transition:background-color .2s var(--ease),color .2s var(--ease);
+}
+
+/* Fila invertida: foco de teclado siempre; hover solo donde existe hover,
+   asi en pantallas tactiles no queda la fila negra pegada despues de tocar. */
+.svc-row:focus-visible{
+  --svc-tags-color:var(--acero-claro);
+  --svc-cta-color:var(--chispa);
+  background-color:var(--fg);color:var(--bg);
+}
+@media (hover:hover){
+  .svc-row:hover{
+    --svc-tags-color:var(--acero-claro);
+    --svc-cta-color:var(--chispa);
+    background-color:var(--fg);color:var(--bg);
+  }
+}
+
+.svc-name{text-wrap:balance}
+
+.svc-body{display:grid;gap:.75rem;max-width:38rem}
+.svc-desc{font-size:clamp(1rem,1.25vw,1.125rem);line-height:1.55;text-wrap:pretty}
+.svc-tags{font-size:.9375rem;line-height:1.5;color:var(--svc-tags-color);transition:color .2s var(--ease)}
+
+/* La accion esta siempre visible: sin hover (tactil) no hay otra forma de descubrirla.
+   Su interlineado iguala al de la descripcion para que quede a la altura de su primer renglon. */
+.svc-cta{
+  display:inline-flex;align-items:center;gap:.5rem;justify-self:start;
+  font:700 1rem/1.7 var(--f-text);
+  color:var(--svc-cta-color);
+  transition:color .2s var(--ease);
+}
+
+/* ---- cierre ---- */
+.svc-end{display:grid;gap:1.5rem;justify-items:start;margin-top:clamp(2.5rem,5vw,4rem)}
+.svc-more{max-width:40rem;font-size:clamp(1.125rem,1.6vw,1.375rem);line-height:1.5;font-weight:500;text-wrap:balance}
+
+/* ---- desde 60rem ---- */
+@media (min-width:60rem){
+  /* titulo a la izquierda en dos renglones, lede a la derecha apoyado en el borde inferior */
+  .svc-head{grid-template-columns:minmax(0,1fr) minmax(0,26rem);column-gap:clamp(2rem,4vw,4rem);align-items:end}
+  .svc-title{max-width:6em}
+
+  /* nombre | descripcion y tipos | accion, alineadas arriba */
+  .svc-row{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) auto;column-gap:clamp(2rem,4vw,4rem);align-items:start}
+  .svc-cta{justify-self:end}
+
+  .svc-end{grid-template-columns:minmax(0,1fr) auto;align-items:center;column-gap:clamp(2rem,4vw,4rem)}
+}
+/* ===== trabajos.css ===== */
+/* ================= TRABAJOS (work-) ================= */
+
+.work-head{display:grid;gap:1.25rem;margin-bottom:clamp(2.5rem,6vw,4.5rem)}
+.work-head .lede{text-wrap:balance}
+
+.work-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(1rem,2vw,1.5rem)}
+.work-item{display:flex;min-width:0}
+.work-tile{display:flex;flex:1;flex-direction:column;min-width:0}
+
+/* ---- area visual: 3:2 (las fotos de stock ya vienen en 3:2) ---- */
+.work-media{position:relative;isolation:isolate;overflow:hidden;aspect-ratio:3/2;background:var(--negro)}
+.work-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* La foto real del comedero: a color y mas alta que las demas (la pieza es vertical). */
+.work-media--photo{aspect-ratio:4/3}
+.work-media--photo .work-photo{object-position:50% 55%}
+
+/* Fotos de stock: gris + velo cobalto para que entren en la paleta negro, azul y blanco.
+   Al reemplazarlas por fotos reales, cambiar work-tile--stock por work-tile--photo y se ven a color. */
+.work-tile--stock .work-photo{filter:grayscale(1) contrast(1.08) brightness(1.15)}
+.work-tile--stock .work-media::after{content:"";position:absolute;inset:0;background:var(--cobalto);mix-blend-mode:multiply;opacity:.6;pointer-events:none}
+
+/* ---- epigrafe debajo del area visual ---- */
+.work-cap{padding-top:.9rem}
+.work-cap-title{font:800 1.5rem/1 var(--f-display);text-transform:uppercase;letter-spacing:.005em}
+.work-cap-cat{margin-top:.35rem;font-size:.9rem;line-height:1.4;color:var(--muted)}
+
+/* ---- chapa de llamada ---- */
+.work-cta{min-width:0}
+.work-cta-plate{display:grid;gap:1rem;justify-items:start;padding:clamp(1.5rem,4vw,3rem)}
+.work-cta-text{max-width:30rem;color:var(--muted)}
+.work-cta-btn{margin-top:.5rem}
+
+/* ---- 2 columnas: la foto real ocupa el ancho completo ---- */
+@media (min-width:40rem){
+  .work-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .work-item--photo,.work-cta{grid-column:1 / -1}
+  .work-media--photo{aspect-ratio:16/9}
+}
+
+/* ---- 3 columnas: la foto real a la izquierda en 2 filas, los 4 trabajos en 2x2 ---- */
+@media (min-width:60rem){
+  .work-grid{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr) minmax(0,1fr)}
+  .work-item--photo{grid-column:1;grid-row:1 / span 2}
+  .work-media--photo{flex:1;aspect-ratio:auto;min-height:18rem}
+
+  /* texto a la izquierda, boton a la derecha */
+  .work-cta-plate{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"titulo boton" "texto boton";align-items:center;column-gap:clamp(2rem,5vw,4rem);row-gap:.75rem}
+  .work-cta-title{grid-area:titulo}
+  .work-cta-text{grid-area:texto}
+  .work-cta-btn{grid-area:boton;margin-top:0}
+}
+/* ===== proceso-nosotros.css ===== */
+/* =====================================================================
+   PROCESO (prefijo flow-) y NOSOTROS (prefijo about-)
+   Colores solo desde las variables de tema de base.css.
+   ===================================================================== */
+
+/* ---------------------------------------------------------------------
+   PROCESO: lenguaje de la cinta metrica.
+   Mobile: una columna, regla vertical a la izquierda de cada paso.
+   Desde 60rem: cuatro columnas, regla horizontal arriba de cada una.
+   --------------------------------------------------------------------- */
+.flow{
+  --flow-pitch:24px;   /* distancia entre marcas */
+  --flow-tick:10px;    /* largo de la marca corta */
+  --flow-mark:22px;    /* largo de la marca de cada paso */
+}
+
+.flow-lede{margin-top:clamp(1rem,2vw,1.5rem)}
+
+.flow-steps{
+  display:grid;
+  gap:clamp(2.5rem,8vw,3.5rem);
+  margin-top:clamp(3rem,7vw,5.5rem);
+}
+
+.flow-step{position:relative;padding-left:2.5rem}
+
+/* regla: linea de 1px con una marca corta cada 24px */
+.flow-step::before{
+  content:"";
+  position:absolute;top:0;bottom:0;left:0;
+  width:calc(var(--flow-tick) + 1px);
+  border-left:1px solid var(--line);
+  background:repeating-linear-gradient(180deg,var(--line) 0 1px,transparent 1px var(--flow-pitch));
+  background-clip:padding-box;
+}
+
+/* marca larga de color: el arranque del paso, donde se apoya el numeral */
+.flow-step::after{
+  content:"";
+  position:absolute;top:0;left:0;
+  width:var(--flow-mark);height:2px;
+  background:var(--accent);
+}
+
+.flow-num{
+  display:block;
+  font:900 clamp(4rem,9vw,7.5rem)/.8 var(--f-display);
+  color:var(--accent);
+}
+.flow-title{margin-top:.75rem;text-wrap:balance}
+.flow-text{margin-top:.75rem;max-width:34rem;color:var(--muted)}
+.flow-cta{margin-top:clamp(3rem,6vw,4.5rem)}
+
+@media (min-width:60rem){
+  .flow-steps{
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:0 clamp(1.5rem,3vw,3rem);
+  }
+  .flow-step{padding:calc(var(--flow-mark) + 1rem) 0 0}
+  .flow-step::before{
+    bottom:auto;right:0;
+    width:auto;height:calc(var(--flow-tick) + 1px);
+    border-left:0;
+    border-top:1px solid var(--line);
+    background:repeating-linear-gradient(90deg,var(--line) 0 1px,transparent 1px var(--flow-pitch));
+    background-clip:padding-box;
+  }
+  .flow-step::after{width:2px;height:var(--flow-mark)}
+  .flow-title{font-size:clamp(1.5rem,2.6vw,2.5rem)}
+}
+
+/* ---------------------------------------------------------------------
+   NOSOTROS: titulo + foto en la columna 1, puntos en la columna 2.
+   --------------------------------------------------------------------- */
+.about-grid{display:grid;gap:2.5rem}
+
+.about-title{font-size:clamp(2.5rem,6vw,5rem)}
+
+/* foto: .plate (clip-path) va en el mismo contenedor que el ::after */
+.about-photo{
+  position:relative;
+  isolation:isolate;
+  max-width:40rem;
+  margin-top:clamp(1.5rem,3vw,2.5rem);
+  background:var(--papel);
+}
+.about-photo::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:var(--cobalto);
+  mix-blend-mode:multiply;
+  opacity:.6;
+  pointer-events:none;
+}
+.about-img{
+  width:100%;
+  height:auto;
+  aspect-ratio:4/3;
+  object-fit:cover;
+  filter:grayscale(1) contrast(1.08);
+}
+
+.about-points{border-bottom:1px solid var(--line)}
+.about-point{
+  padding-block:clamp(1.5rem,3vw,2.25rem);
+  border-top:1px solid var(--line);
+}
+.about-point-title{font:700 1.25rem/1.3 var(--f-text)}
+.about-point-text{margin-top:.5rem;max-width:36rem;color:var(--muted)}
+
+.about-contact{
+  margin-top:clamp(2rem,4vw,3rem);
+  font-size:1.125rem;
+  color:var(--muted);
+}
+.about-tel{
+  display:inline-block;
+  padding-block:.5rem;          /* area tactil de 44px */
+  color:var(--fg);
+  font-weight:700;
+  white-space:nowrap;
+  text-decoration:underline;
+  text-decoration-color:var(--accent);
+  text-decoration-thickness:2px;
+  text-underline-offset:.25em;
+}
+.about-tel:hover{color:var(--accent)}
+
+@media (min-width:60rem){
+  .about-grid{
+    grid-template-columns:minmax(0,5fr) minmax(0,7fr);
+    gap:clamp(2rem,6vw,6rem);
+  }
+}
+/* ===== contacto.css ===== */
+/* =====================================================================
+   Contacto, footer y botón flotante de WhatsApp
+   Prefijos: contact- / foot- / wa-
+   ===================================================================== */
+
+/* ---------- Contacto: layout ---------- */
+.contact-grid{display:grid;gap:clamp(2rem,6vw,6rem);align-items:start}
+.contact-info{display:flex;flex-direction:column;gap:1.5rem;min-width:0;overflow-wrap:break-word}
+
+/* ---------- Contacto: lista de datos ---------- */
+.contact-list{margin-top:1rem;border-bottom:1px solid var(--line)}
+.contact-item{display:grid;grid-template-columns:1.5rem minmax(0,1fr);column-gap:1rem;align-items:center;padding-block:.25rem;border-top:1px solid var(--line)}
+.contact-icon{width:1.5rem;height:1.5rem}
+.contact-text{display:flex;flex-direction:column;align-items:flex-start;min-width:0}
+.contact-label{font-size:.875rem;line-height:1.3;color:var(--muted)}
+/* El valor mide 44px de alto sea link o texto, así todas las filas tienen el mismo ritmo */
+.contact-value{min-height:2.75rem;padding-block:.65rem;font-size:1.125rem;font-weight:600;line-height:1.3;overflow-wrap:anywhere}
+.contact-link{color:var(--fg);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.25em}
+
+/* ---------- Contacto: tarjeta y formulario ---------- */
+.contact-card{max-width:42rem;padding:clamp(1.5rem,4vw,3rem)}
+.contact-form{display:grid;gap:1.25rem}
+.contact-legend{font-size:.875rem;color:var(--muted)}
+.contact-field{display:grid;gap:.4rem}
+.contact-field-label{font-weight:700;line-height:1.3}
+.contact-star{margin-left:.15em}
+.contact-help{font-size:.875rem;color:var(--muted)}
+
+.contact-control{display:block;width:100%;min-height:3rem;margin:0;padding:.6rem .9rem;border:2px solid var(--line);border-radius:0;background:var(--blanco);color:var(--fg);font-size:1rem;line-height:1.4;-webkit-appearance:none;appearance:none}
+.contact-control:focus{border-color:var(--fg)}
+.contact-control--select{padding-right:2.75rem;cursor:pointer}
+.contact-control--area{resize:vertical}
+.contact-select{position:relative}
+.contact-select-icon{position:absolute;top:0;bottom:0;right:.9rem;width:1.25rem;height:1.25rem;margin-block:auto;pointer-events:none}
+
+.contact-submit{width:100%}
+.contact-note{margin-top:1rem;font-size:.875rem;color:var(--muted)}
+.contact-status{font-size:.9375rem;font-weight:600}
+.contact-status:not(:empty){margin-top:.75rem}
+.contact-status-link{display:flex;align-items:center;width:fit-content;min-height:2.75rem;color:var(--accent);font-weight:700;text-decoration:underline;text-underline-offset:.25em}
+
+/* ---------- Footer ---------- */
+/* En mobile el padding inferior deja libre el botón flotante al llegar al final de la página */
+.foot{padding-block:clamp(3rem,7vw,5rem) calc(5.5rem + env(safe-area-inset-bottom))}
+.foot-top{display:grid;gap:2.5rem}
+.foot-block{min-width:0}
+
+.foot-brand{display:inline-flex;align-items:center;gap:.75rem;min-height:2.75rem;color:var(--fg);text-decoration:none}
+.foot-brand-icon{width:2.5rem;height:2.5rem;color:var(--accent)}
+.foot-brand-text{display:flex;flex-direction:column;gap:.2rem}
+.foot-brand-name{font:900 2rem/.85 var(--f-display);text-transform:uppercase;letter-spacing:.005em}
+.foot-brand-sub{font-size:.875rem;line-height:1.2;color:var(--muted)}
+.foot-about{max-width:24rem;margin-top:1rem;color:var(--muted)}
+
+.foot-link{display:flex;align-items:center;width:fit-content;min-height:2.75rem;color:var(--fg);text-decoration:none;overflow-wrap:anywhere}
+.foot-social{display:flex;gap:.75rem;margin-top:1rem}
+.foot-social-link{display:flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border:1px solid var(--line);color:var(--fg);text-decoration:none}
+
+.foot-bottom{margin-top:clamp(2.5rem,5vw,4rem);padding-top:1.5rem;border-top:1px solid var(--line)}
+.foot-legal{font-size:.875rem;color:var(--muted)}
+
+/* ---------- Botón flotante de WhatsApp ---------- */
+.wa-float{position:fixed;right:max(1rem,env(safe-area-inset-right));bottom:max(1rem,env(safe-area-inset-bottom));z-index:40;display:flex;align-items:center;justify-content:center;width:3.5rem;height:3.5rem;border:2px solid var(--blanco);border-radius:0;background:var(--cobalto);color:var(--blanco);text-decoration:none}
+.wa-icon{width:1.75rem;height:1.75rem}
+/* El botón vive fuera de las secciones con tema: el foco lleva doble aro para verse sobre cualquier fondo */
+.wa-float:focus-visible{outline-color:var(--negro);box-shadow:0 0 0 3px var(--blanco)}
+
+/* ---------- Hover (solo en dispositivos con puntero, así no queda "pegado" al tocar) ---------- */
+@media (hover:hover){
+  .contact-link:hover{text-decoration-thickness:4px}
+  .foot-link:hover{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.25em}
+  .foot-social-link:hover{background:var(--fg);border-color:var(--fg);color:var(--bg)}
+  .wa-float:hover{background:var(--negro)}
+}
+
+/* ---------- 40rem ---------- */
+@media (min-width:40rem){
+  .contact-submit{width:auto;justify-self:start}
+  .foot{padding-bottom:2rem}
+}
+
+/* ---------- 60rem ---------- */
+@media (min-width:60rem){
+  .contact-grid{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr)}
+  .contact-value{font-size:1.25rem}
+  .foot-top{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1.2fr);gap:clamp(2rem,5vw,4rem)}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></symbol>
+    <symbol id="i-anvil" viewBox="0 0 40 40"><path d="M2 13L12 10H36V16H26V21L30 26V32H10V26L14 21V16H12Z"/></symbol>
+  </defs>
+</svg>
+<header class="hdr theme-dark">
+  <div class="wrap hdr-bar">
+    <a class="hdr-brand" href="#inicio" aria-label="Herrería Olmedo, ir al inicio">
+      <svg class="icon icon--fill hdr-mark" aria-hidden="true"><use href="#i-anvil"/></svg>
+      <span class="hdr-brand-text">
+        <span class="hdr-name">Olmedo</span>
+        <span class="hdr-sub">Herrería</span>
+      </span>
+    </a>
+
+    <nav class="hdr-nav" aria-label="Principal">
+      <ul class="hdr-list">
+        <li><a class="hdr-link" href="#servicios">Servicios</a></li>
+        <li><a class="hdr-link" href="#trabajos">Trabajos</a></li>
+        <li><a class="hdr-link" href="#proceso">Proceso</a></li>
+        <li><a class="hdr-link" href="#nosotros">Nosotros</a></li>
+        <li><a class="hdr-link" href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <div class="hdr-actions">
+      <a class="hdr-tel" href="tel:+5490000000000" aria-label="Llamar al +54 9 00 0000-0000">
+        <svg class="icon hdr-tel-ico" aria-hidden="true"><use href="#i-phone"/></svg>
+        <span class="hdr-tel-text">+54 9 00 0000-0000</span>
+      </a>
+      <a class="btn btn--primary hdr-cta" href="https://wa.me/5490000000000?text=Hola!%20Quiero%20pedir%20un%20presupuesto" target="_blank" rel="noopener">Pedir presupuesto<span class="visually-hidden"> por WhatsApp</span></a>
+    </div>
+
+    <button class="hdr-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+      <svg class="icon hdr-ico-open" aria-hidden="true"><use href="#i-menu"/></svg>
+      <svg class="icon hdr-ico-close" aria-hidden="true"><use href="#i-close"/></svg>
+    </button>
+  </div>
+
+  <div class="hdr-menu" id="menu" hidden>
+    <div class="wrap hdr-menu-inner">
+      <nav aria-label="Menú móvil">
+        <ul class="hdr-menu-list">
+          <li><a class="hdr-menu-link" href="#servicios">Servicios</a></li>
+          <li><a class="hdr-menu-link" href="#trabajos">Trabajos</a></li>
+          <li><a class="hdr-menu-link" href="#proceso">Proceso</a></li>
+          <li><a class="hdr-menu-link" href="#nosotros">Nosotros</a></li>
+          <li><a class="hdr-menu-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="hdr-menu-foot">
+        <a class="btn btn--primary" href="https://wa.me/5490000000000?text=Hola!%20Quiero%20pedir%20un%20presupuesto" target="_blank" rel="noopener">
+          <svg class="icon icon--fill" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+          Pedir presupuesto por WhatsApp
+        </a>
+        <a class="btn btn--ghost" href="tel:+5490000000000" aria-label="Llamar al +54 9 00 0000-0000">
+          <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+          +54 9 00 0000-0000
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="tape-rail" aria-hidden="true"><div class="tape-blade"></div></div>
+</header>
+<main id="contenido">
+<section id="inicio" class="hero grain theme-dark" aria-labelledby="hero-title">
+  <div class="wrap hero-grid">
+
+    <div class="hero-copy">
+      <h1 class="h-display hero-title" id="hero-title">
+        <span class="hero-line">Herrería</span>
+        <span class="hero-line">a medida</span>
+      </h1>
+
+      <div class="hero-cota">
+        <span class="hero-cota-label">la medida la ponés vos</span>
+      </div>
+
+      <p class="lede hero-lede">Portones, rejas, escaleras, barandas y muebles de hierro y madera. Vamos a tu casa, tomamos las medidas y te pasamos el presupuesto sin cargo.</p>
+
+      <div class="hero-actions">
+        <a class="btn btn--primary hero-btn" href="https://wa.me/5490000000000?text=Hola!%20Quiero%20pedir%20un%20presupuesto" target="_blank" rel="noopener">
+          <svg class="icon icon--fill" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+          Pedir presupuesto por WhatsApp
+        </a>
+        <a class="btn btn--ghost hero-btn" href="tel:+5490000000000">
+          <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+          Llamar ahora
+        </a>
+      </div>
+
+      <ul class="hero-checks">
+        <li class="hero-check"><svg class="icon hero-check-ico" aria-hidden="true"><use href="#i-check"/></svg>Presupuesto sin cargo</li>
+        <li class="hero-check"><svg class="icon hero-check-ico" aria-hidden="true"><use href="#i-check"/></svg>Medimos en tu domicilio</li>
+        <li class="hero-check"><svg class="icon hero-check-ico" aria-hidden="true"><use href="#i-check"/></svg>Fabricación propia e instalación</li>
+      </ul>
+    </div>
+
+    <figure class="hero-figure">
+      <div class="hero-plate plate">
+        <img class="hero-img" src="img/comedero-elevado.jpg" width="1200" height="1322" alt="Comedero elevado para mascotas de hierro negro y madera, con dos bachas de acero inoxidable" fetchpriority="high" decoding="async">
+      </div>
+      <div class="hero-cota hero-cota--v" aria-hidden="true">
+        <span class="hero-cota-label hero-cota-label--v">alto: a tu medida</span>
+      </div>
+      <div class="hero-cota hero-cota--h" aria-hidden="true">
+        <span class="hero-cota-label">ancho: a tu medida</span>
+      </div>
+      <figcaption class="hero-caption">Comedero elevado para mascotas: hierro negro mate y madera, hecho a medida.</figcaption>
+    </figure>
+
+  </div>
+</section>
+<!-- SERVICIOS: cada fila abre WhatsApp con un mensaje propio (el numero se reemplaza con buscar y reemplazar) -->
+<section id="servicios" class="section svc theme-light" aria-labelledby="servicios-titulo">
+  <div class="wrap">
+
+    <div class="svc-head">
+      <h2 class="h-section svc-title" id="servicios-titulo">Lo que fabricamos</h2>
+      <p class="lede svc-lede">Trabajos para casas, comercios y obras. Si no ves lo que buscás, contanos tu idea: la dibujamos y la hacemos.</p>
+    </div>
+
+    <ul class="svc-list" role="list">
+
+      <li class="svc-item">
+        <a class="svc-row" href="https://wa.me/5490000000000?text=Hola!%20Quiero%20consultar%20por%20portones" target="_blank" rel="noopener">
+          <h3 class="h-item svc-name">Portones</h3>
+          <div class="svc-body">
+            <p class="svc-desc">Corredizos, levadizos y de abrir, para cocheras, casas y comercios. Quedan listos para automatizar.</p>
+            <p class="svc-tags">Corredizos, levadizos, batientes</p>
+          </div>
+          <span class="svc-cta">Consultar <span class="visually-hidden">por WhatsApp</span><svg class="icon icon--fill" aria-hidden="true"><use href="#i-whatsapp"/></svg></span>
+        </a>
+      </li>
+
+      <li class="svc-item">
+        <a class="svc-row" href="https://wa.me/5490000000000?text=Hola!%20Quiero%20consultar%20por%20rejas%20y%20protecciones" target="_blank" rel="noopener">
+          <h3 class="h-item svc-name">Rejas y protecciones</h3>
+          <div class="svc-body">
+            <p class="svc-desc">Rejas de seguridad para ventanas, puertas y balcones, lisas o con diseño. También restauramos las que ya tenés.</p>
+            <p class="svc-tags">Ventanas, puertas, balcones, restauración</p>
+          </div>
+          <span class="svc-cta">Consultar <span class="visually-hidden">por WhatsApp</span><svg class="icon icon--fill" aria-hidden="true"><use href="#i-whatsapp"/></svg></span>
+        </a>
+      </li>
+
+      <li class="svc-item">
+        <a class="svc-row" href="https://wa.me/5490000000000?text=Hola!%20Quiero%20consultar%20por%20escaleras%20y%20barandas" target="_blank" rel="noopener">
+          <h3 class="h-item svc-name">Escaleras y barandas</h3>
+          <div class="svc-body">
+            <p class="svc-desc">Escaleras rectas, caracol y estructurales, con barandas y pasamanos a medida para interior y exterior.</p>
+            <p class="svc-tags">Rectas, caracol, estructurales, barandas, pasamanos</p>
+          </div>
+          <span class="svc-cta">Consultar <span class="visually-hidden">por WhatsApp</span><svg class="icon icon--fill" aria-hidden="true"><use href="#i-whatsapp"/></svg></span>
+        </a>
+      </li>
+
+      <li class="svc-item">
+        <a class="svc-row" href="https://wa.me/5490000000000?text=Hola!%20Quiero%20consultar%20por%20muebles%20de%20hierro%20y%20madera" target="_blank" rel="noopener">
+          <h3 class="h-item svc-name">Muebles de hierro y madera</h3>
+          <div class="svc-body">
+            <p class="svc-desc">Mesas, estantes, bancos y piezas únicas, como el comedero elevado para mascotas de la foto.</p>
+            <p class="svc-tags">Mesas, estantes, bancos, comederos para mascotas</p>
+          </div>
+          <span class="svc-cta">Consultar <span class="visually-hidden">por WhatsApp</span><svg class="icon icon--fill" aria-hidden="true"><use href="#i-whatsapp"/></svg></span>
+        </a>
+      </li>
+
+      <li class="svc-item">
+        <a class="svc-row" href="https://wa.me/5490000000000?text=Hola!%20Quiero%20consultar%20por%20techos%20y%20estructuras" target="_blank" rel="noopener">
+          <h3 class="h-item svc-name">Techos y estructuras</h3>
+          <div class="svc-body">
+            <p class="svc-desc">Techos de cochera, pérgolas, tinglados y estructuras especiales, armadas para el uso que les vas a dar.</p>
+            <p class="svc-tags">Cocheras, pérgolas, tinglados, estructuras</p>
+          </div>
+          <span class="svc-cta">Consultar <span class="visually-hidden">por WhatsApp</span><svg class="icon icon--fill" aria-hidden="true"><use href="#i-whatsapp"/></svg></span>
+        </a>
+      </li>
+
+      <li class="svc-item">
+        <a class="svc-row" href="https://wa.me/5490000000000?text=Hola!%20Quiero%20consultar%20por%20soldadura%20y%20reparaciones" target="_blank" rel="noopener">
+          <h3 class="h-item svc-name">Soldadura y reparaciones</h3>
+          <div class="svc-body">
+            <p class="svc-desc">Soldadura en general, reformas y mantenimiento en hierro y acero inoxidable.</p>
+            <p class="svc-tags">Soldadura, reformas, mantenimiento, acero inoxidable</p>
+          </div>
+          <span class="svc-cta">Consultar <span class="visually-hidden">por WhatsApp</span><svg class="icon icon--fill" aria-hidden="true"><use href="#i-whatsapp"/></svg></span>
+        </a>
+      </li>
+
+    </ul>
+
+    <div class="svc-end">
+      <p class="svc-more">También hacemos cercos, puertas de hierro, parrillas, maceteros, repisas, marcos, rejas de estilo y trabajos en acero inoxidable.</p>
+      <a class="btn btn--primary" href="https://wa.me/5490000000000?text=Hola!%20Tengo%20una%20idea%20para%20un%20trabajo%20a%20medida" target="_blank" rel="noopener">Contanos tu idea por WhatsApp <svg class="icon icon--fill" aria-hidden="true"><use href="#i-whatsapp"/></svg></a>
+    </div>
+
+  </div>
+</section>
+<!-- ===== TRABAJOS =====
+     Los tiles con work-tile--stock llevan gris + velo cobalto (ver trabajos.css).
+     Al reemplazar una foto de stock por una foto real, cambiar work-tile--stock por work-tile--photo y se ve a color. -->
+<section id="trabajos" class="section work theme-paper" aria-labelledby="trabajos-titulo">
+  <div class="wrap">
+
+    <div class="work-head">
+      <h2 class="h-section" id="trabajos-titulo">Trabajos</h2>
+      <p class="lede">Portones, rejas, escaleras y muebles: algunos de los trabajos que hacemos a medida.</p>
+    </div>
+
+    <ul class="work-grid" role="list">
+
+      <li class="work-item work-item--photo">
+        <figure class="work-tile work-tile--photo">
+          <div class="work-media work-media--photo">
+            <img class="work-photo" src="img/comedero-elevado.jpg" width="1200" height="1322" alt="Comedero elevado para mascotas de hierro negro y madera, con dos bachas de acero inoxidable" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="work-cap">
+            <h3 class="work-cap-title">Comedero elevado</h3>
+            <p class="work-cap-cat">Muebles de hierro y madera</p>
+          </figcaption>
+        </figure>
+      </li>
+
+      <li class="work-item">
+        <figure class="work-tile work-tile--stock">
+          <!-- FOTO DE STOCK: reemplazar por una foto de un trabajo real -->
+          <div class="work-media">
+            <img class="work-photo" src="img/trabajo-porton.jpg" width="1400" height="933" alt="Portón de hierro" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="work-cap">
+            <h3 class="work-cap-title">Portones</h3>
+            <p class="work-cap-cat">Corredizos, levadizos y de abrir</p>
+          </figcaption>
+        </figure>
+      </li>
+
+      <li class="work-item">
+        <figure class="work-tile work-tile--stock">
+          <!-- FOTO DE STOCK: reemplazar por una foto de un trabajo real -->
+          <div class="work-media">
+            <img class="work-photo" src="img/trabajo-reja.jpg" width="1400" height="933" alt="Reja de hierro" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="work-cap">
+            <h3 class="work-cap-title">Rejas y protecciones</h3>
+            <p class="work-cap-cat">Seguridad con diseño</p>
+          </figcaption>
+        </figure>
+      </li>
+
+      <li class="work-item">
+        <figure class="work-tile work-tile--stock">
+          <!-- FOTO DE STOCK: reemplazar por una foto de un trabajo real -->
+          <div class="work-media">
+            <img class="work-photo" src="img/trabajo-escalera.jpg" width="1400" height="933" alt="Escalera metálica con baranda" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="work-cap">
+            <h3 class="work-cap-title">Escaleras y barandas</h3>
+            <p class="work-cap-cat">A medida, interior y exterior</p>
+          </figcaption>
+        </figure>
+      </li>
+
+      <li class="work-item">
+        <figure class="work-tile work-tile--stock">
+          <!-- FOTO DE STOCK: reemplazar por una foto de un trabajo real -->
+          <div class="work-media">
+            <img class="work-photo" src="img/trabajo-estructura.jpg" width="1400" height="933" alt="Estructura metálica" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="work-cap">
+            <h3 class="work-cap-title">Techos y estructuras</h3>
+            <p class="work-cap-cat">Cocheras, pérgolas y tinglados</p>
+          </figcaption>
+        </figure>
+      </li>
+
+      <li class="work-cta">
+        <div class="work-cta-plate plate grain theme-dark">
+          <h3 class="h-item work-cta-title">¿Tenés un proyecto?</h3>
+          <p class="work-cta-text">Mandanos una foto o las medidas y te pasamos el presupuesto.</p>
+          <a class="btn btn--primary work-cta-btn" href="https://wa.me/5490000000000?text=Hola!%20Quiero%20pedir%20un%20presupuesto" target="_blank" rel="noopener">
+            <svg class="icon icon--fill" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+            Pedir presupuesto por WhatsApp
+          </a>
+        </div>
+      </li>
+
+    </ul>
+
+  </div>
+</section>
+<!-- ===== PROCESO ===== -->
+<section id="proceso" class="section flow grain theme-dark" aria-labelledby="proceso-titulo">
+  <div class="wrap">
+    <h2 class="h-section" id="proceso-titulo">Cómo trabajamos</h2>
+    <p class="lede flow-lede">Cuatro pasos, de tu mensaje a la pieza instalada.</p>
+
+    <ol class="flow-steps" role="list">
+      <li class="flow-step">
+        <span class="flow-num" aria-hidden="true">1</span>
+        <h3 class="h-item flow-title">Nos contás qué necesitás</h3>
+        <p class="flow-text">Por WhatsApp o por teléfono. Con una foto o un dibujo a mano alcanza.</p>
+      </li>
+      <li class="flow-step">
+        <span class="flow-num" aria-hidden="true">2</span>
+        <h3 class="h-item flow-title">Medimos en tu domicilio</h3>
+        <p class="flow-text">Vamos hasta el lugar, tomamos las medidas y vemos los detalles. Sin cargo.</p>
+      </li>
+      <li class="flow-step">
+        <span class="flow-num" aria-hidden="true">3</span>
+        <h3 class="h-item flow-title">Te pasamos el presupuesto</h3>
+        <p class="flow-text">Precio cerrado y materiales definidos, antes de empezar.</p>
+      </li>
+      <li class="flow-step">
+        <span class="flow-num" aria-hidden="true">4</span>
+        <h3 class="h-item flow-title">Fabricamos e instalamos</h3>
+        <p class="flow-text">Armamos la pieza en el taller, la colocamos y verificamos que quede perfecta. Con garantía.</p>
+      </li>
+    </ol>
+
+    <a class="btn btn--primary flow-cta" href="https://wa.me/5490000000000?text=Hola!%20Quiero%20pedir%20un%20presupuesto" target="_blank" rel="noopener">
+      <svg class="icon icon--fill" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+      Empezá con tu mensaje
+      <span class="visually-hidden"> por WhatsApp</span>
+    </a>
+  </div>
+</section>
+<!-- ===== NOSOTROS ===== -->
+<section id="nosotros" class="section about theme-light" aria-labelledby="nosotros-titulo">
+  <div class="wrap about-grid">
+
+    <div class="about-lead">
+      <h2 class="h-section about-title" id="nosotros-titulo">Cada pieza se mide, se corta, se suelda y se termina a mano.</h2>
+      <!-- FOTO DE STOCK: reemplazar por una foto del taller real -->
+      <figure class="about-photo plate">
+        <img class="about-img" src="img/taller-soldadura.jpg" width="1400" height="933" loading="lazy" decoding="async" alt="Soldadura en el taller de herrería">
+      </figure>
+    </div>
+
+    <div class="about-body">
+      <ul class="about-points" role="list">
+        <li class="about-point">
+          <h3 class="about-point-title">Materiales de primera</h3>
+          <p class="about-point-text">Hierro y acero inoxidable seleccionados, soldaduras prolijas y pinturas pensadas para que la pieza dure.</p>
+        </li>
+        <li class="about-point">
+          <h3 class="about-point-title">Te acompañamos de punta a punta</h3>
+          <p class="about-point-text">Te asesoramos, medimos, fabricamos e instalamos. Un solo equipo se encarga de todo el trabajo.</p>
+        </li>
+        <li class="about-point">
+          <h3 class="about-point-title">Precio claro</h3>
+          <p class="about-point-text">Presupuesto cerrado antes de empezar. Sin sorpresas al final.</p>
+        </li>
+      </ul>
+
+      <p class="about-contact">¿Preferís hablar? Llamanos al <a class="about-tel" href="tel:+5490000000000">+54 9 00 0000-0000</a></p>
+    </div>
+
+  </div>
+</section>
+<!-- ===== Contacto ===== -->
+<section id="contacto" class="section contact theme-cobalt" aria-labelledby="contacto-titulo">
+  <div class="wrap contact-grid">
+
+    <div class="contact-info">
+      <h2 class="h-section" id="contacto-titulo">Pedí tu presupuesto</h2>
+      <p class="lede">Contanos qué necesitás y, si las tenés, las medidas aproximadas. Te respondemos por WhatsApp.</p>
+
+      <ul class="contact-list">
+        <li class="contact-item">
+          <svg class="icon icon--fill contact-icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+          <div class="contact-text">
+            <span class="contact-label">WhatsApp</span>
+            <a class="contact-value contact-link" href="https://wa.me/5490000000000?text=Hola!%20Quiero%20pedir%20un%20presupuesto" target="_blank" rel="noopener">+54 9 00 0000-0000</a>
+          </div>
+        </li>
+        <li class="contact-item">
+          <svg class="icon contact-icon" aria-hidden="true"><use href="#i-phone"/></svg>
+          <div class="contact-text">
+            <span class="contact-label">Teléfono</span>
+            <a class="contact-value contact-link" href="tel:+5490000000000">+54 9 00 0000-0000</a>
+          </div>
+        </li>
+        <li class="contact-item">
+          <svg class="icon contact-icon" aria-hidden="true"><use href="#i-mail"/></svg>
+          <div class="contact-text">
+            <span class="contact-label">Email</span>
+            <a class="contact-value contact-link" href="mailto:contacto@herreriaolmedo.com.ar">contacto@herreriaolmedo.com.ar</a>
+          </div>
+        </li>
+        <li class="contact-item">
+          <svg class="icon contact-icon" aria-hidden="true"><use href="#i-pin"/></svg>
+          <div class="contact-text">
+            <span class="contact-label">Taller</span>
+            <span class="contact-value">Dirección del taller, Ciudad</span>
+          </div>
+        </li>
+        <li class="contact-item">
+          <svg class="icon contact-icon" aria-hidden="true"><use href="#i-instagram"/></svg>
+          <div class="contact-text">
+            <span class="contact-label">Instagram</span>
+            <a class="contact-value contact-link" href="https://instagram.com/herreriaolmedo" target="_blank" rel="noopener">@herreriaolmedo</a>
+          </div>
+        </li>
+        <li class="contact-item">
+          <svg class="icon contact-icon" aria-hidden="true"><use href="#i-facebook"/></svg>
+          <div class="contact-text">
+            <span class="contact-label">Facebook</span>
+            <a class="contact-value contact-link" href="https://facebook.com/herreriaolmedo" target="_blank" rel="noopener">Herrería Olmedo</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="contact-card plate theme-light">
+      <form class="contact-form" aria-label="Pedido de presupuesto">
+        <p class="contact-legend">Los campos con * son obligatorios.</p>
+
+        <div class="contact-field">
+          <label class="contact-field-label" for="contact-nombre">Nombre<span class="contact-star" aria-hidden="true">*</span></label>
+          <input class="contact-control" id="contact-nombre" name="nombre" type="text" autocomplete="name" autocapitalize="words" required>
+        </div>
+
+        <div class="contact-field">
+          <label class="contact-field-label" for="contact-telefono">WhatsApp o teléfono<span class="contact-star" aria-hidden="true">*</span></label>
+          <input class="contact-control" id="contact-telefono" name="telefono" type="tel" autocomplete="tel" inputmode="tel" required>
+        </div>
+
+        <div class="contact-field">
+          <label class="contact-field-label" for="contact-tipo">Qué necesitás</label>
+          <div class="contact-select">
+            <select class="contact-control contact-control--select" id="contact-tipo" name="tipo">
+              <option value="">Elegí una opción</option>
+              <option>Portón</option>
+              <option>Reja o protección</option>
+              <option>Escalera o baranda</option>
+              <option>Mueble de hierro y madera</option>
+              <option>Techo o estructura</option>
+              <option>Reparación o soldadura</option>
+              <option>Otro</option>
+            </select>
+            <svg class="icon contact-select-icon" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </div>
+
+        <div class="contact-field">
+          <label class="contact-field-label" for="contact-medidas">Medidas aproximadas</label>
+          <input class="contact-control" id="contact-medidas" name="medidas" type="text" aria-describedby="contact-medidas-ayuda">
+          <p class="contact-help" id="contact-medidas-ayuda">Por ejemplo: 3 m de ancho por 2 m de alto</p>
+        </div>
+
+        <div class="contact-field">
+          <label class="contact-field-label" for="contact-mensaje">Mensaje</label>
+          <textarea class="contact-control contact-control--area" id="contact-mensaje" name="mensaje" rows="4"></textarea>
+        </div>
+
+        <button class="btn btn--primary contact-submit" type="submit" aria-describedby="contact-nota">
+          <svg class="icon icon--fill" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+          Enviar por WhatsApp
+        </button>
+      </form>
+
+      <p class="contact-note" id="contact-nota">Se abre WhatsApp con tu mensaje listo para enviar.</p>
+      <p class="contact-status" role="status" aria-live="polite"></p>
+    </div>
+
+  </div>
+</section>
+</main>
+<!-- ===== Footer ===== -->
+<footer class="foot grain theme-dark">
+  <div class="wrap">
+
+    <div class="foot-top">
+      <div class="foot-block">
+        <a class="foot-brand" href="#inicio">
+          <svg class="icon icon--fill foot-brand-icon" aria-hidden="true"><use href="#i-anvil"/></svg>
+          <span class="foot-brand-text">
+            <span class="foot-brand-name">Olmedo</span>
+            <span class="foot-brand-sub">Herrería</span>
+          </span>
+        </a>
+        <p class="foot-about">Herrería a medida: portones, rejas, escaleras, barandas y muebles de hierro y madera.</p>
+      </div>
+
+      <nav class="foot-block" aria-label="Secciones">
+        <ul>
+          <li><a class="foot-link" href="#servicios">Servicios</a></li>
+          <li><a class="foot-link" href="#trabajos">Trabajos</a></li>
+          <li><a class="foot-link" href="#proceso">Proceso</a></li>
+          <li><a class="foot-link" href="#nosotros">Nosotros</a></li>
+          <li><a class="foot-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="foot-block">
+        <ul>
+          <li><a class="foot-link" href="tel:+5490000000000">+54 9 00 0000-0000</a></li>
+          <li><a class="foot-link" href="mailto:contacto@herreriaolmedo.com.ar">contacto@herreriaolmedo.com.ar</a></li>
+        </ul>
+        <ul class="foot-social">
+          <li>
+            <a class="foot-social-link" href="https://wa.me/5490000000000?text=Hola!%20Quiero%20pedir%20un%20presupuesto" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg class="icon icon--fill" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+            </a>
+          </li>
+          <li>
+            <a class="foot-social-link" href="https://instagram.com/herreriaolmedo" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>
+            </a>
+          </li>
+          <li>
+            <a class="foot-social-link" href="https://facebook.com/herreriaolmedo" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <p class="foot-legal">© 2026 Herrería Olmedo. Todos los derechos reservados.</p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- Botón flotante de WhatsApp -->
+<a class="wa-float" href="https://wa.me/5490000000000?text=Hola!%20Quiero%20pedir%20un%20presupuesto" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+  <svg class="icon icon--fill wa-icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+</a>
+<script>
+/* ===== hero.js ===== */
+(function () {
+  'use strict';
+
+  var root = document.documentElement;
+
+  /* ---------- cinta metrica: --p = scrollY / (scrollHeight - innerHeight) ---------- */
+  var queued = false;
+
+  function paintTape() {
+    queued = false;
+    var max = root.scrollHeight - window.innerHeight;
+    var p = max > 0 ? window.scrollY / max : 0;
+    if (p < 0) p = 0;
+    if (p > 1) p = 1;
+    root.style.setProperty('--p', p.toFixed(4));
+  }
+
+  function queueTape() {
+    if (queued) return;
+    queued = true;
+    window.requestAnimationFrame(paintTape);
+  }
+
+  window.addEventListener('scroll', queueTape, { passive: true });
+  window.addEventListener('resize', queueTape, { passive: true });
+  window.addEventListener('load', queueTape);
+  paintTape();
+
+  /* ---------- menu mobile ---------- */
+  var header = document.querySelector('.hdr');
+  var toggle = document.querySelector('.hdr-toggle');
+  var menu = document.getElementById('menu');
+  if (!header || !toggle || !menu) return;
+
+  var isOpen = false;
+  var wide = window.matchMedia('(min-width: 60rem)');
+
+  function setOpen(open, restoreFocus) {
+    if (open === isOpen) return;
+    isOpen = open;
+    menu.hidden = !open;
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+    root.classList.toggle('menu-open', open);
+    if (open) {
+      var first = menu.querySelector('a[href]');
+      if (first) first.focus();
+    } else if (restoreFocus) {
+      toggle.focus({ preventScroll: true });
+    }
+  }
+
+  // elementos enfocables que se ven ahora dentro del header (para encerrar el foco con el menu abierto)
+  function focusables() {
+    var all = header.querySelectorAll('a[href], button');
+    var out = [];
+    for (var i = 0; i < all.length; i++) {
+      if (all[i].getClientRects().length) out.push(all[i]);
+    }
+    return out;
+  }
+
+  toggle.addEventListener('click', function () {
+    setOpen(!isOpen, true);
+  });
+
+  menu.addEventListener('click', function (e) {
+    if (e.target.closest && e.target.closest('a')) setOpen(false, true);
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (!isOpen) return;
+    if (e.key === 'Escape' || e.key === 'Esc') {
+      setOpen(false, true);
+      return;
+    }
+    if (e.key !== 'Tab') return;
+    var list = focusables();
+    if (!list.length) return;
+    var first = list[0];
+    var last = list[list.length - 1];
+    var active = document.activeElement;
+    if (!header.contains(active)) {
+      e.preventDefault();
+      first.focus();
+    } else if (e.shiftKey && active === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && active === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  });
+
+  // si la ventana llega a 60rem o mas con el menu abierto, se cierra
+  function onWide(e) {
+    if (e.matches) setOpen(false, false);
+  }
+  if (wide.addEventListener) wide.addEventListener('change', onWide);
+  else if (wide.addListener) wide.addListener(onWide);
+})();
+/* ===== contacto.js ===== */
+/* Contacto: arma el mensaje del formulario y abre WhatsApp. Sin dependencias. */
+(function () {
+  "use strict";
+
+  // Número de WhatsApp: se reemplaza junto con el resto de los datos del sitio.
+  var WA_URL = "https://wa.me/5490000000000?text=";
+
+  var form = document.querySelector(".contact-form");
+  var status = document.querySelector(".contact-status");
+  if (!form) return;
+
+  // Lee un campo por su atributo name; devuelve "" si el campo no existe.
+  function valor(nombre) {
+    var campo = form.elements[nombre];
+    return campo ? campo.value.trim() : "";
+  }
+
+  function avisar(texto) {
+    if (status) status.textContent = texto;
+  }
+
+  // Si el navegador bloquea la ventana, dejamos un link para abrirla a mano.
+  function avisarConEnlace(url) {
+    if (!status) return;
+    var enlace = document.createElement("a");
+    enlace.className = "contact-status-link";
+    enlace.href = url;
+    enlace.target = "_blank";
+    enlace.rel = "noopener";
+    enlace.textContent = "Abrir WhatsApp";
+    status.textContent = "Tu navegador bloqueó la ventana. ";
+    status.appendChild(enlace);
+  }
+
+  form.addEventListener("submit", function (evento) {
+    evento.preventDefault();
+
+    // "required" acepta un campo con solo espacios: lo vaciamos para que el
+    // navegador lo marque con su mensaje de siempre.
+    ["nombre", "telefono"].forEach(function (nombre) {
+      var campo = form.elements[nombre];
+      if (campo && !campo.value.trim()) campo.value = "";
+    });
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    var tipo = valor("tipo");
+    var medidas = valor("medidas");
+    var mensaje = valor("mensaje");
+
+    var texto =
+      "Hola! Soy " + valor("nombre") +
+      ". Quiero pedir un presupuesto" + (tipo ? " de: " + tipo : "") + "." +
+      (medidas ? "\nMedidas aproximadas: " + medidas : "") +
+      (mensaje ? "\n" + mensaje : "") +
+      "\nMi contacto: " + valor("telefono");
+
+    var url = WA_URL + encodeURIComponent(texto);
+
+    // Con la opción "noopener" window.open devuelve siempre null (aunque abra bien),
+    // y no se podría detectar el bloqueo. Por eso se abre sin ella y se corta el
+    // vínculo con esta página a mano: mismo resultado de seguridad.
+    var ventana = null;
+    try {
+      ventana = window.open(url, "_blank");
+    } catch (error) {
+      ventana = null;
+    }
+
+    if (ventana) {
+      try {
+        ventana.opener = null;
+      } catch (error) {
+        /* la ventana ya navegó a otro origen: no hay nada más que hacer */
+      }
+      avisar("Abriendo WhatsApp…");
+    } else {
+      avisarConEnlace(url);
+    }
+  });
+})();
+</script>
+</body>
+</html>
